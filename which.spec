@@ -68,17 +68,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc {README,EXAMPLES,ChangeLog}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-
-%changelog
-* Fri May 21 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [2.5-1]
-- updated Source Url,
-- added URL filed.
-
-* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [2.4-1]
-- package is FHS 2.0 compliant,
-- spec file based on RH version; rewritten for PLD use by me,
-  Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl> 
-  and Micha³ Kuratczyk <kura@pld.org.pl>,
-- pl translation by Wojtek ¦lusarczyk <wojtek@shadow.eu.org>.
