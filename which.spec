@@ -16,7 +16,7 @@ Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
 # Source0-md5: 3897f2a9d0c53a166ba68be9c21353a6
 Source1:	%{name}.csh
 Source2:	%{name}.sh
-Source3:	%{name}-non-english-man-pages.tar.bz2
+Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source3-md5: 8c6cfc55ca1046a2812eafd17d29561c
 URL:		http://www.xs4all.nl/~carlo17/which/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
