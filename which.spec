@@ -4,12 +4,13 @@ Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH.
 Summary(pl):	Program 'which'
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	2.4
+Version:	2.5
 Release:	1
 Copyright:	distributable
 Group:		Utilities/File
 Group(pl):	Narzêdzia/Pliki
-Source:		ftp://ftp.gnu.org/which/%{name}-%{version}.tar.gz
+Source:		ftp://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
+URL:		http://www.xs4all.nl/~carlo17/which/
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -23,10 +24,9 @@ variable, is located in the /bin directory.
 Geben Sie ihm einen Programmnamen, und es sagt Ihnen, ob sich
 dieser in Ihrem PATH befindet. 
 
-Beispielsweise würde 'which ls' das Ergebnis '/bin/ls' liefern, weil
-sich das ls-Programm, das in einem der Verzeichnisse in Ihrer
-PATH-Umgebungsvariable abgelegt ist, sich im /bin-Verzeichnis
-befindet.
+Beispielsweise würde 'which ls' das Ergebnis '/bin/ls' liefern, weil sich
+das ls-Programm, das in einem der Verzeichnisse in Ihrer
+PATH-Umgebungsvariable abgelegt ist, sich im /bin-Verzeichnis befindet.
 
 %description -l fr
 Donnez lui un nom de programme, et il vous dit s'il est dans votre 'PATH'.
@@ -70,6 +70,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/*
 
 %changelog
+* Fri May 21 1999 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
+  [2.5-1]
+- updated Source Url,
+- added URL filed.
+
 * Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [2.4-1]
 - package is FHS 2.0 compliant,
@@ -77,4 +82,3 @@ rm -rf $RPM_BUILD_ROOT
   Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl> 
   and Micha³ Kuratczyk <kura@pld.org.pl>,
 - pl translation by Wojtek ¦lusarczyk <wojtek@shadow.eu.org>.
- 
