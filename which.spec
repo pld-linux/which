@@ -4,8 +4,8 @@ Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH
 Summary(pl):	Pokazuje pod jak± ¶cie¿k± jest zlokalizowany program
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	2.9
-Release:	3
+Version:	2.11
+Release:	2
 License:	GPL
 Group:		Utilities/File
 Group(pl):	Narzêdzia/Pliki
