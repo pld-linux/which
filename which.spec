@@ -13,7 +13,7 @@ Source0:	ftp://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
 Source1:	which.csh
 Source2:	which.sh
 URL:		http://www.xs4all.nl/~carlo17/which/
-Buildroot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The which command shows the full pathname of a specified program, if the
@@ -33,7 +33,6 @@ swojej ¶cie¿ce.
 
 %description -l tr
 which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný belirtir.
-
 
 %prep
 %setup -q
