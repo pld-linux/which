@@ -68,6 +68,12 @@ bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
+
+%postun
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
+
 %files
 %defattr(644,root,root,755)
 %doc README EXAMPLES NEWS AUTHORS
@@ -79,3 +85,4 @@ rm -rf $RPM_BUILD_ROOT
 %lang(hu) %{_mandir}/hu/man1/*
 %lang(it) %{_mandir}/it/man1/*
 %lang(pl) %{_mandir}/pl/man1/*
+%{_infodir}/*
