@@ -19,8 +19,8 @@ Source2:	%{name}.sh
 Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source3-md5:	8c6cfc55ca1046a2812eafd17d29561c
 URL:		http://www.xs4all.nl/~carlo17/which/
-BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Requires:	setup >= 2.4.6-2
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The which command shows the full pathname of a specified program, if
