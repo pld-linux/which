@@ -10,8 +10,6 @@ Version:	2.13
 Release:	1
 License:	GPL
 Group:		Applications/File
-Group(de):	Applikationen/Datei
-Group(pl):	Aplikacje/Pliki
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
 Source1:	%{name}.csh
 Source2:	%{name}.sh
