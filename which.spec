@@ -4,12 +4,12 @@ Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH.
 Summary(pl):	Program 'which'
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	1.0
-Release:	12
+Version:	2.4
+Release:	1
 Copyright:	distributable
 Group:		Utilities/File
 Group(pl):	Narzêdzia/Pliki
-Source:		ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/a/bin/%{name}.tar.gz
+Source:		ftp://ftp.gnu.org/which/%{name}-%{version}.tar.gz
 Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -43,32 +43,42 @@ swojej ¶cie¿ce.
 which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný belirtir.
 
 %prep
-%setup -q -n %{name}
+%setup -q
 
 %build
-make \
-	DESTDIR="/usr/bin" \
-	CFLAGS="$RPM_OPT_FLAGS" \
-	LDFLAGS="-s"
+CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
+./configure %{_target} \
+	--prefix=%{_prefix} \
+	--mandir=%{_mandir}
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 
-install which.1 $RPM_BUILD_ROOT/usr/man/man1/which.1
-install -s which $RPM_BUILD_ROOT/usr/bin/which
+make install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
+	README EXAMPLES ChangeLog
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(755,root,root) /usr/bin/*
-/usr/man/man1/*
+%doc {README,EXAMPLES,ChangeLog}.gz
+%attr(755,root,root) %{_bindir}/*
+%{_mandir}/man1/*
 
 %changelog
+* Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [2.4-1]
+- upgraded to 2.4,
+- added using ./configure,
+- added using more rpm macros,
+- simplifications in %install,
+- minor changes,
+- package is FHS 2.0 compliant.
+
 * Wed Apr 21 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.0-11]
 - recompiled on rpm 3,
