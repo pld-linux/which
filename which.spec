@@ -92,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog EXAMPLES NEWS README*
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) /etc/shrc.d/*
+/etc/shrc.d/*
 %{_mandir}/man1/*
 %lang(fi) %{_mandir}/fi/man1/*
 %lang(fr) %{_mandir}/fr/man1/*
