@@ -72,38 +72,9 @@ rm -rf $RPM_BUILD_ROOT
 %changelog
 * Mon May 17 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [2.4-1]
-- upgraded to 2.4,
-- added using ./configure,
-- added using more rpm macros,
-- simplifications in %install,
-- minor changes,
-- package is FHS 2.0 compliant.
-
-* Wed Apr 21 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.0-11]
-- recompiled on rpm 3,
-- cosmetics.
-
-* Fri Apr  2 1999 Piotr Czerwiñski <pius@pld.org.pl>
-- removed man group from man pages,
-- added full %defattr description in %files,
-- cosmetic changes for common l&f.
-
-* Thu Feb 10 1999 Micha³ Kuratczyk <kurkens@polbox.com>
-  [1.0-10]
-- added gzipping man page
-- added LDFLAGS=-s
-- added Group(pl)
-
-* Wed Oct 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.0-9]
-- added using $RPM_OPT_FLAGS during compile.
-
-* Thu Jul 23 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-- added pl translation.
-
-* Mon Apr 27 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Fri Jun 13 1997 Erik Troan <ewt@redhat.com>
-- built against glibc
+- package is FHS 2.0 compliant,
+- spec file based on RH version; rewritten for PLD use by me,
+  Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl> 
+  and Micha³ Kuratczyk <kura@pld.org.pl>,
+- pl translation by Wojtek ¦lusarczyk <wojtek@shadow.eu.org>.
+ 
