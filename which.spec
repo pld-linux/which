@@ -9,7 +9,7 @@ Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Summary(uk):	ðÏËÁÚÕ¤, × ÑËÏÍÕ Ú ËÁÔÁÌÏÇ¦× × PATH ÚÎÁÈÏÄÉÔØÓÑ ÐÒÏÇÒÁÍÁ
 Name:		which
 Version:	2.16
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
@@ -20,6 +20,7 @@ Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-ma
 # Source3-md5:	8c6cfc55ca1046a2812eafd17d29561c
 URL:		http://www.xs4all.nl/~carlo17/which/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Requires:	setup >= 2.4.6-2
 
 %description
 The which command shows the full pathname of a specified program, if
@@ -70,12 +71,12 @@ belirtir.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/etc/profile.d
+install -d $RPM_BUILD_ROOT/etc/shrc.d
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d
+install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d
 bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
 %clean
@@ -91,7 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog EXAMPLES NEWS README*
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) /etc/profile.d/*
+%attr(755,root,root) /etc/shrc.d/*
 %{_mandir}/man1/*
 %lang(fi) %{_mandir}/fi/man1/*
 %lang(fr) %{_mandir}/fr/man1/*
