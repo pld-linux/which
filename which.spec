@@ -5,7 +5,7 @@ Summary(pl): Program 'which'
 Summary(tr): PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:        which
 Version:     1.0
-Release:     10
+Release:     11
 Copyright:   distributable
 Group:       Utilities/File
 Group(pl):   Narzêdzia/Pliki
@@ -46,7 +46,10 @@ which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný belirtir.
 %setup -q -n %{name}
 
 %build
-make DESTDIR="/usr/bin" CFLAGS="$RPM_OPT_FLAGS" LDFLAGS=-s
+make \
+	DESTDIR="/usr/bin" \
+	CFLAGS="$RPM_OPT_FLAGS" \
+	LDFLAGS="-s"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -66,8 +69,12 @@ rm -rf $RPM_BUILD_ROOT
 /usr/man/man1/*
 
 %changelog
-* Fri Apr  2 1999 Piotr Czerwiñski <pius@pld.org.pl>
+* Wed Apr 21 1999 Piotr Czerwiñski <pius@pld.org.pl>
   [1.0-11]
+- recompiled on rpm 3,
+- cosmetics.
+
+* Fri Apr  2 1999 Piotr Czerwiñski <pius@pld.org.pl>
 - removed man group from man pages,
 - added full %defattr description in %files,
 - cosmetic changes for common l&f.
