@@ -4,7 +4,7 @@ Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH.
 Summary(pl):	Program 'which'
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	2.5
+Version:	2.8
 Release:	1
 Copyright:	distributable
 Group:		Utilities/File
@@ -58,13 +58,13 @@ rm -rf $RPM_BUILD_ROOT
 make install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README EXAMPLES ChangeLog
+	README EXAMPLES NEWS AUTHORS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,EXAMPLES,ChangeLog}.gz
+%doc {README,EXAMPLES,NEWS,AUTHORS}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
