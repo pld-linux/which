@@ -1,16 +1,18 @@
 Summary:	Displays where a particular program in your path is located
 Summary(de):	Zeigt an, wo sich ein Programm befindet
+Summary(es):	Localiza un programa que está en uno de los directorios de su PATH
 Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH
 Summary(pl):	Pokazuje pod jak± ¶cie¿k± jest zlokalizowany program
+Summary(pt_BR):	Localiza um programa que está em um dos diretórios de seu PATH
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	2.12
-Release:	3
+Version:	2.13
+Release:	1
 License:	GPL
 Group:		Applications/File
 Group(de):	Applikationen/Datei
 Group(pl):	Aplikacje/Pliki
-Source0:	ftp://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
+Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
 Source1:	%{name}.csh
 Source2:	%{name}.sh
 Source3:	%{name}-non-english-man-pages.tar.bz2
@@ -20,6 +22,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 The which command shows the full pathname of a specified program, if
 the specified program is in your PATH.
+
+%description -l es
+Tu le das un nombre de programa, y el te dirá si está en su 'PATH'.
+Por ejemplo, 'which ls' podría imprimir '/bin/ls', porque el programa
+ls, que está en uno de los directorios listados en la variable de
+ambiente PATH, está localizado en el directorio /bin.
 
 %description -l de
 Der which-Befehl zeigt den ganzen Pfadname eines angegebenen
@@ -32,6 +40,12 @@ si ce programme est dans votre PATH.
 %description -l pl 
 Program 'which' pomo¿e Ci odszukaæ dany program i powie Ci czy masz go
 w swojej ¶cie¿ce.
+
+%description -l pt_BR
+Dê a ele um nome de programa, e ele lhe dirá se está no seu 'PATH'.
+Por exemplo, 'which ls' poderia imprimir '/bin/ls', porque o programa
+ls, que está em um dos diretórios listados na variável de ambiente
+PATH, está localizado no diretório /bin.
 
 %description -l tr
 which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný
