@@ -35,7 +35,7 @@ Programms, wenn es sich im PATH befindet.
 La commande which affiche le chemin complet d'un programme spécifié,
 si ce programme est dans votre PATH.
 
-%description -l pl 
+%description -l pl
 Program 'which' pomo¿e Ci odszukaæ dany program i powie Ci czy masz go
 w swojej ¶cie¿ce.
 
