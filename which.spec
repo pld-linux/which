@@ -5,9 +5,10 @@ Summary(pl): Program 'which'
 Summary(tr): PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:        which
 Version:     1.0
-Release:     9
+Release:     10
 Copyright:   distributable
 Group:       Utilities/File
+Group(pl):   Narzêdzia/Pliki
 Source:      ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/a/bin/%{name}.tar.gz
 Buildroot:   /tmp/%{name}-%{version}-root
 
@@ -45,7 +46,7 @@ which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný belirtir.
 %setup -q -n %{name}
 
 %build
-make DESTDIR="/usr/bin" CFLAGS="$RPM_OPT_FLAGS"
+make DESTDIR="/usr/bin" CFLAGS="$RPM_OPT_FLAGS" LDFLAGS=-s
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -54,14 +55,22 @@ install -d $RPM_BUILD_ROOT/usr/{bin,man/man1}
 install which.1 $RPM_BUILD_ROOT/usr/man/man1/which.1
 install -s which $RPM_BUILD_ROOT/usr/bin/which
 
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755, root, root) /usr/bin/which
-%attr(644, root,  man) /usr/man/man1/which.1
+%attr(755, root, root) /usr/bin/*
+%attr(644, root,  man) /usr/man/man1/*
 
 %changelog
+* Thu Feb 10 1999 Micha³ Kuratczyk <kurkens@polbox.com>
+  [1.0-10]
+- added gzipping man page
+- added LDFLAGS=-s
+- added Group(pl)
+
 * Wed Oct 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [1.0-9]
 - added using $RPM_OPT_FLAGS during compile.
