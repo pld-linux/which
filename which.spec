@@ -4,41 +4,42 @@ Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH
 Summary(pl):	Pokazuje pod jak± ¶cie¿k± jest zlokalizowany program
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	2.11
-Release:	2
+Version:	2.12
+Release:	1
 License:	GPL
-Group:		Utilities/File
-Group(pl):	Narzêdzia/Pliki
+Group:		Applications/File
+Group(de):	Applikationen/Datei
+Group(pl):	Aplikacje/Pliki
 Source0:	ftp://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
-Source1:	which.csh
-Source2:	which.sh
+Source1:	%{name}.csh
+Source2:	%{name}.sh
 URL:		http://www.xs4all.nl/~carlo17/which/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-The which command shows the full pathname of a specified program, if the
-specified program is in your PATH.
+The which command shows the full pathname of a specified program, if
+the specified program is in your PATH.
 
 %description -l de
-Der which-Befehl zeigt den ganzen Pfadname eines angegebenen Programms,
-wenn es sich im PATH befindet.
+Der which-Befehl zeigt den ganzen Pfadname eines angegebenen
+Programms, wenn es sich im PATH befindet.
 
 %description -l fr
-La commande which affiche le chemin complet d'un programme spécifié, si ce
-programme est dans votre PATH.
+La commande which affiche le chemin complet d'un programme spécifié,
+si ce programme est dans votre PATH.
 
 %description -l pl 
-Program 'which' pomo¿e Ci odszukaæ dany program i powie Ci czy masz go w
-swojej ¶cie¿ce.
+Program 'which' pomo¿e Ci odszukaæ dany program i powie Ci czy masz go
+w swojej ¶cie¿ce.
 
 %description -l tr
-which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný belirtir.
+which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný
+belirtir.
 
 %prep
 %setup -q
 
 %build
-LDFLAGS="-s"; export LDFLAGS
 %configure
 %{__make}
 
@@ -50,8 +51,8 @@ install -d $RPM_BUILD_ROOT/etc/profile.d
 
 install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README EXAMPLES NEWS AUTHORS
+gzip -9nf README EXAMPLES NEWS AUTHORS \
+	$RPM_BUILD_ROOT%{_mandir}/man1/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
