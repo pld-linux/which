@@ -6,7 +6,7 @@ Summary(pl):	Pokazuje pod jak± ¶cie¿k± jest zlokalizowany program
 Summary(pt_BR):	Localiza um programa que está em um dos diretórios de seu PATH
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
-Version:	2.13
+Version:	2.14
 Release:	1
 License:	GPL
 Group:		Applications/File
@@ -53,7 +53,7 @@ belirtir.
 %setup -q
 
 %build
-%configure2_13
+%configure
 %{__make}
 
 %install
@@ -65,14 +65,12 @@ install -d $RPM_BUILD_ROOT/etc/profile.d
 install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d
 bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-gzip -9nf README EXAMPLES NEWS AUTHORS
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README EXAMPLES NEWS AUTHORS
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) /etc/profile.d/*
 %{_mandir}/man1/*
