@@ -1,16 +1,16 @@
-Summary:     Finds a program 'which' is in one of the directories on your PATH
-Summary(de): Findet ein Programm in einem der Verzeichnisse in Ihrem PATH
-Summary(fr): Recherche un programme dans l'un des répertoires de votre PATH.
-Summary(pl): Program 'which'
-Summary(tr): PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
-Name:        which
-Version:     1.0
-Release:     11
-Copyright:   distributable
-Group:       Utilities/File
-Group(pl):   Narzêdzia/Pliki
-Source:      ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/a/bin/%{name}.tar.gz
-Buildroot:   /tmp/%{name}-%{version}-root
+Summary:	Finds a program 'which' is in one of the directories on your PATH
+Summary(de):	Findet ein Programm in einem der Verzeichnisse in Ihrem PATH
+Summary(fr):	Recherche un programme dans l'un des répertoires de votre PATH.
+Summary(pl):	Program 'which'
+Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
+Name:		which
+Version:	1.0
+Release:	12
+Copyright:	distributable
+Group:		Utilities/File
+Group(pl):	Narzêdzia/Pliki
+Source:		ftp://sunsite.unc.edu/pub/Linux/distributions/slackware/source/a/bin/%{name}.tar.gz
+Buildroot:	/tmp/%{name}-%{version}-root
 
 %description
 Give it a program name, and it tells you if it is on your 'PATH'.
