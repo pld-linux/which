@@ -1,7 +1,7 @@
 Summary:     Finds a program 'which' is in one of the directories on your PATH
 Summary(de): Findet ein Programm in einem der Verzeichnisse in Ihrem PATH
 Summary(fr): Recherche un programme dans l'un des répertoires de votre PATH.
-Summary(pl): Program 'witch'
+Summary(pl): Program 'which'
 Summary(tr): PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:        which
 Version:     1.0
@@ -35,7 +35,7 @@ se trouve dans un des répertoires listées dans votre variable d'environnement
 PATH, est situé dans le répertoire /bin/.
 
 %description -l pl 
-Program 'witch' pomo¿e Ci odszukaæ dany program i powie Ci czy masz go w
+Program 'which' pomo¿e Ci odszukaæ dany program i powie Ci czy masz go w
 swojej ¶cie¿ce.
 
 %description -l tr
