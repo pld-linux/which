@@ -5,7 +5,7 @@ Summary(pl):	Pokazuje pod jak± ¶cie¿k± jest zlokalizowany program
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
 Version:	2.12
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/File
 Group(de):	Applikationen/Datei
@@ -51,15 +51,14 @@ install -d $RPM_BUILD_ROOT/etc/profile.d
 
 install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d
 
-gzip -9nf README EXAMPLES NEWS AUTHORS \
-	$RPM_BUILD_ROOT%{_mandir}/man1/*
+gzip -9nf README EXAMPLES NEWS AUTHORS
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,EXAMPLES,NEWS,AUTHORS}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) /etc/profile.d/*
 %{_mandir}/man1/*
