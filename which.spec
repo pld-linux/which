@@ -61,10 +61,17 @@ gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/*
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%attr(755, root, root) /usr/bin/*
-%attr(644, root,  man) /usr/man/man1/*
+%defattr(644,root,root,755)
+%attr(755,root,root) /usr/bin/*
+/usr/man/man1/*
 
 %changelog
+* Fri Apr  2 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.0-11]
+- removed man group from man pages,
+- added full %defattr description in %files,
+- cosmetic changes for common l&f.
+
 * Thu Feb 10 1999 Micha³ Kuratczyk <kurkens@polbox.com>
   [1.0-10]
 - added gzipping man page
