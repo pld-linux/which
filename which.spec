@@ -8,16 +8,16 @@ Summary(ru):	Показывает, в каком из каталогов в PATH находится программа
 Summary(tr):	PATH'de bulunan bir dosyanЩn yerini bulmayЩ saПlayan bir araГ
 Summary(uk):	Показу╓, в якому з каталог╕в в PATH знаходиться програма
 Name:		which
-Version:	2.14
-Release:	2
+Version:	2.16
+Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
-# Source0-md5: 3897f2a9d0c53a166ba68be9c21353a6
+# Source0-md5:	830b83af48347a9a3520f561e47cbc9b
 Source1:	%{name}.csh
 Source2:	%{name}.sh
 Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
-# Source3-md5: 8c6cfc55ca1046a2812eafd17d29561c
+# Source3-md5:	8c6cfc55ca1046a2812eafd17d29561c
 URL:		http://www.xs4all.nl/~carlo17/which/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -72,7 +72,8 @@ belirtir.
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/etc/profile.d
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/profile.d
 bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
@@ -88,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README EXAMPLES NEWS AUTHORS
+%doc AUTHORS ChangeLog EXAMPLES NEWS README*
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) /etc/profile.d/*
 %{_mandir}/man1/*
