@@ -4,7 +4,9 @@ Summary(es):	Localiza un programa que estА en uno de los directorios de su PATH
 Summary(fr):	Recherche un programme dans l'un des rИpertoires de votre PATH
 Summary(pl):	Pokazuje pod jak╠ ╤cie©k╠ jest zlokalizowany program
 Summary(pt_BR):	Localiza um programa que estА em um dos diretСrios de seu PATH
+Summary(ru):	Показывает, в каком из каталогов в PATH находится программа
 Summary(tr):	PATH'de bulunan bir dosyanЩn yerini bulmayЩ saПlayan bir araГ
+Summary(uk):	Показу╓, в якому з каталог╕в в PATH знаходиться програма
 Name:		which
 Version:	2.14
 Release:	1
@@ -45,9 +47,17 @@ Por exemplo, 'which ls' poderia imprimir '/bin/ls', porque o programa
 ls, que estА em um dos diretСrios listados na variАvel de ambiente
 PATH, estА localizado no diretСrio /bin.
 
+%description -l ru
+Команда 'which' показывает полный путь к указанной программе, если эта
+программа есть в вашем пути поиска программ, PATH.
+
 %description -l tr
 which bir komut veya programЩn PATH'inizde bulunup bulunmadЩПЩnЩ
 belirtir.
+
+%description -l uk
+Команда 'which' показу╓ повний шлях до вказано╖ програми, якщо ця
+програма ╓ в вашому шляху пошуку програм, PATH.
 
 %prep
 %setup -q
