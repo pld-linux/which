@@ -9,7 +9,7 @@ Summary(tr):	PATH'de bulunan bir dosyanЩn yerini bulmayЩ saПlayan bir araГ
 Summary(uk):	Показу╓, в якому з каталог╕в в PATH знаходиться програма
 Name:		which
 Version:	2.16
-Release:	3
+Release:	4
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
