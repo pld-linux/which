@@ -5,7 +5,7 @@ Summary(pl):	Program 'which'
 Summary(tr):	PATH'de bulunan bir dosyanýn yerini bulmayý saðlayan bir araç
 Name:		which
 Version:	2.8
-Release:	1
+Release:	2
 Copyright:	distributable
 Group:		Utilities/File
 Group(pl):	Narzêdzia/Pliki
@@ -46,10 +46,8 @@ which bir komut veya programýn PATH'inizde bulunup bulunmadýðýný belirtir.
 %setup -q
 
 %build
-CFLAGS="$RPM_OPT_FLAGS" LDFLAGS="-s" \
-./configure %{_target_platform} \
-	--prefix=%{_prefix} \
-	--mandir=%{_mandir}
+LDFLAGS="-s"; export LDFLAGS
+%configure
 make
 
 %install
