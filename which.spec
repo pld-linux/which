@@ -1,12 +1,12 @@
 Summary:	Displays where a particular program in your path is located
-Summary(de):	Zeigt an, wo sich ein Programm befindet
-Summary(es):	Localiza un programa que estА en uno de los directorios de su PATH
-Summary(fr):	Recherche un programme dans l'un des rИpertoires de votre PATH
-Summary(pl):	Pokazuje pod jak╠ ╤cie©k╠ jest zlokalizowany program
-Summary(pt_BR):	Localiza um programa que estА em um dos diretСrios de seu PATH
-Summary(ru):	Показывает, в каком из каталогов в PATH находится программа
-Summary(tr):	PATH'de bulunan bir dosyanЩn yerini bulmayЩ saПlayan bir araГ
-Summary(uk):	Показу╓, в якому з каталог╕в в PATH знаходиться програма
+Summary(de.UTF-8):   Zeigt an, wo sich ein Programm befindet
+Summary(es.UTF-8):   Localiza un programa que estц║ en uno de los directorios de su PATH
+Summary(fr.UTF-8):   Recherche un programme dans l'un des rц╘pertoires de votre PATH
+Summary(pl.UTF-8):   Pokazuje pod jakд┘ е⌡cieе╪kд┘ jest zlokalizowany program
+Summary(pt_BR.UTF-8):   Localiza um programa que estц║ em um dos diretцЁrios de seu PATH
+Summary(ru.UTF-8):   п÷п╬п╨п╟п╥я▀п╡п╟п╣я┌, п╡ п╨п╟п╨п╬п╪ п╦п╥ п╨п╟я┌п╟п╩п╬пЁп╬п╡ п╡ PATH п╫п╟я┘п╬п╢п╦я┌я│я▐ п©я─п╬пЁя─п╟п╪п╪п╟
+Summary(tr.UTF-8):   PATH'de bulunan bir dosyanд╠n yerini bulmayд╠ saд÷layan bir araц╖
+Summary(uk.UTF-8):   п÷п╬п╨п╟п╥я┐я■, п╡ я▐п╨п╬п╪я┐ п╥ п╨п╟я┌п╟п╩п╬пЁя√п╡ п╡ PATH п╥п╫п╟я┘п╬п╢п╦я┌я▄я│я▐ п©я─п╬пЁя─п╟п╪п╟
 Name:		which
 Version:	2.16
 Release:	5
@@ -26,41 +26,41 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The which command shows the full pathname of a specified program, if
 the specified program is in your PATH.
 
-%description -l es
-Tu le das un nombre de programa, y el te dirА si estА en su 'PATH'.
-Por ejemplo, 'which ls' podrМa imprimir '/bin/ls', porque el programa
-ls, que estА en uno de los directorios listados en la variable de
-ambiente PATH, estА localizado en el directorio /bin.
+%description -l es.UTF-8
+Tu le das un nombre de programa, y el te dirц║ si estц║ en su 'PATH'.
+Por ejemplo, 'which ls' podrц╜a imprimir '/bin/ls', porque el programa
+ls, que estц║ en uno de los directorios listados en la variable de
+ambiente PATH, estц║ localizado en el directorio /bin.
 
-%description -l de
+%description -l de.UTF-8
 Der which-Befehl zeigt den ganzen Pfadname eines angegebenen
 Programms, wenn es sich im PATH befindet.
 
-%description -l fr
-La commande which affiche le chemin complet d'un programme spИcifiИ,
+%description -l fr.UTF-8
+La commande which affiche le chemin complet d'un programme spц╘cifiц╘,
 si ce programme est dans votre PATH.
 
-%description -l pl
-Program 'which' pomo©e Ci odszukaФ dany program i powie Ci czy masz go
-w swojej ╤cie©ce.
+%description -l pl.UTF-8
+Program 'which' pomoе╪e Ci odszukaд┤ dany program i powie Ci czy masz go
+w swojej е⌡cieе╪ce.
 
-%description -l pt_BR
-DЙ a ele um nome de programa, e ele lhe dirА se estА no seu 'PATH'.
+%description -l pt_BR.UTF-8
+Dц╙ a ele um nome de programa, e ele lhe dirц║ se estц║ no seu 'PATH'.
 Por exemplo, 'which ls' poderia imprimir '/bin/ls', porque o programa
-ls, que estА em um dos diretСrios listados na variАvel de ambiente
-PATH, estА localizado no diretСrio /bin.
+ls, que estц║ em um dos diretцЁrios listados na variц║vel de ambiente
+PATH, estц║ localizado no diretцЁrio /bin.
 
-%description -l ru
-Команда 'which' показывает полный путь к указанной программе, если эта
-программа есть в вашем пути поиска программ, PATH.
+%description -l ru.UTF-8
+п п╬п╪п╟п╫п╢п╟ 'which' п©п╬п╨п╟п╥я▀п╡п╟п╣я┌ п©п╬п╩п╫я▀п╧ п©я┐я┌я▄ п╨ я┐п╨п╟п╥п╟п╫п╫п╬п╧ п©я─п╬пЁя─п╟п╪п╪п╣, п╣я│п╩п╦ я█я┌п╟
+п©я─п╬пЁя─п╟п╪п╪п╟ п╣я│я┌я▄ п╡ п╡п╟я┬п╣п╪ п©я┐я┌п╦ п©п╬п╦я│п╨п╟ п©я─п╬пЁя─п╟п╪п╪, PATH.
 
-%description -l tr
-which bir komut veya programЩn PATH'inizde bulunup bulunmadЩПЩnЩ
+%description -l tr.UTF-8
+which bir komut veya programд╠n PATH'inizde bulunup bulunmadд╠д÷д╠nд╠
 belirtir.
 
-%description -l uk
-Команда 'which' показу╓ повний шлях до вказано╖ програми, якщо ця
-програма ╓ в вашому шляху пошуку програм, PATH.
+%description -l uk.UTF-8
+п п╬п╪п╟п╫п╢п╟ 'which' п©п╬п╨п╟п╥я┐я■ п©п╬п╡п╫п╦п╧ я┬п╩я▐я┘ п╢п╬ п╡п╨п╟п╥п╟п╫п╬я≈ п©я─п╬пЁя─п╟п╪п╦, я▐п╨я┴п╬ я├я▐
+п©я─п╬пЁя─п╟п╪п╟ я■ п╡ п╡п╟я┬п╬п╪я┐ я┬п╩я▐я┘я┐ п©п╬я┬я┐п╨я┐ п©я─п╬пЁя─п╟п╪, PATH.
 
 %prep
 %setup -q
