@@ -1,12 +1,12 @@
 Summary:	Displays where a particular program in your path is located
-Summary(de.UTF-8):   Zeigt an, wo sich ein Programm befindet
-Summary(es.UTF-8):   Localiza un programa que está en uno de los directorios de su PATH
-Summary(fr.UTF-8):   Recherche un programme dans l'un des répertoires de votre PATH
-Summary(pl.UTF-8):   Pokazuje pod jaką ścieżką jest zlokalizowany program
-Summary(pt_BR.UTF-8):   Localiza um programa que está em um dos diretórios de seu PATH
-Summary(ru.UTF-8):   Показывает, в каком из каталогов в PATH находится программа
-Summary(tr.UTF-8):   PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir araç
-Summary(uk.UTF-8):   Показує, в якому з каталогів в PATH знаходиться програма
+Summary(de.UTF-8):	Zeigt an, wo sich ein Programm befindet
+Summary(es.UTF-8):	Localiza un programa que está en uno de los directorios de su PATH
+Summary(fr.UTF-8):	Recherche un programme dans l'un des répertoires de votre PATH
+Summary(pl.UTF-8):	Pokazuje pod jaką ścieżką jest zlokalizowany program
+Summary(pt_BR.UTF-8):	Localiza um programa que está em um dos diretórios de seu PATH
+Summary(ru.UTF-8):	Показывает, в каком из каталогов в PATH находится программа
+Summary(tr.UTF-8):	PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir araç
+Summary(uk.UTF-8):	Показує, в якому з каталогів в PATH знаходиться програма
 Name:		which
 Version:	2.16
 Release:	5
