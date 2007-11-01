@@ -8,17 +8,21 @@ Summary(ru.UTF-8):	Показывает, в каком из каталогов �
 Summary(tr.UTF-8):	PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir araç
 Summary(uk.UTF-8):	Показує, в якому з каталогів в PATH знаходиться програма
 Name:		which
-Version:	2.16
-Release:	6
+Version:	2.18
+Release:	1
 License:	GPL
 Group:		Applications/File
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
-# Source0-md5:	830b83af48347a9a3520f561e47cbc9b
+# Source0-md5:	42d51938e48b91f6e19fabf216f5c3e9
 Source1:	%{name}.csh
 Source2:	%{name}.sh
 Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source3-md5:	8c6cfc55ca1046a2812eafd17d29561c
+Patch0:		%{name}-info.patch
 URL:		http://www.xs4all.nl/~carlo17/which/
+# for (static) -liberty
+BuildRequires:	binutils-devel
+BuildRequires:	texinfo
 Requires:	setup >= 2.4.6-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -64,6 +68,7 @@ belirtir.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
@@ -90,13 +95,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog EXAMPLES NEWS README*
-%attr(755,root,root) %{_bindir}/*
-/etc/shrc.d/*
-%{_mandir}/man1/*
-%lang(fi) %{_mandir}/fi/man1/*
-%lang(fr) %{_mandir}/fr/man1/*
-%lang(hu) %{_mandir}/hu/man1/*
-%lang(it) %{_mandir}/it/man1/*
-%lang(pl) %{_mandir}/pl/man1/*
-%{_infodir}/*
+%doc AUTHORS EXAMPLES NEWS README*
+%attr(755,root,root) %{_bindir}/which
+/etc/shrc.d/which.csh
+/etc/shrc.d/which.sh
+%{_mandir}/man1/which.1*
+%lang(fi) %{_mandir}/fi/man1/which.1*
+%lang(fr) %{_mandir}/fr/man1/which.1*
+%lang(hu) %{_mandir}/hu/man1/which.1*
+%lang(it) %{_mandir}/it/man1/which.1*
+%lang(pl) %{_mandir}/pl/man1/which.1*
+%{_infodir}/which.info*
