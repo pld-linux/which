@@ -1,0 +1,14 @@
+--- which-2.18/which.texinfo.orig	2005-04-21 16:29:37.000000000 +0200
++++ which-2.18/which.texinfo	2007-11-01 21:00:14.418130841 +0100
+@@ -5,6 +5,11 @@
+ @include version.texi
+ @c %**end of header
+ 
++@dircategory File utilities:
++@direntry
++* which: (which).			Show full path of commands
++@end direntry
++
+ @setchapternewpage odd
+ 
+ @ifinfo
