@@ -1,14 +1,14 @@
---- which-2.18/which.texinfo.orig	2005-04-21 16:29:37.000000000 +0200
-+++ which-2.18/which.texinfo	2007-11-01 21:00:14.418130841 +0100
-@@ -5,6 +5,11 @@
+--- which-2.19/which.texinfo.orig	2008-01-16 18:35:39.000000000 +0100
++++ which-2.19/which.texinfo	2008-01-22 22:11:23.347080874 +0100
+@@ -3,9 +3,9 @@
+ @setfilename which.info
+ @settitle @command{which}: show full path of commands
  @include version.texi
+-@dircategory System administration
++@dircategory File utilities:
+ @direntry
+-* Which: (which).                               Show full path of commands.
++* Which: (which).			Show full path of commands
+ @end direntry
  @c %**end of header
  
-+@dircategory File utilities:
-+@direntry
-+* which: (which).			Show full path of commands
-+@end direntry
-+
- @setchapternewpage odd
- 
- @ifinfo
