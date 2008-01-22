@@ -8,12 +8,12 @@ Summary(ru.UTF-8):	Показывает, в каком из каталогов �
 Summary(tr.UTF-8):	PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir araç
 Summary(uk.UTF-8):	Показує, в якому з каталогів в PATH знаходиться програма
 Name:		which
-Version:	2.18
+Version:	2.19
 Release:	1
-License:	GPL
+License:	GPL v3+
 Group:		Applications/File
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
-# Source0-md5:	42d51938e48b91f6e19fabf216f5c3e9
+# Source0-md5:	bbd094cec2444cd78befbc0cf09deea4
 Source1:	%{name}.csh
 Source2:	%{name}.sh
 Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
