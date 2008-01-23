@@ -83,6 +83,8 @@ install -d $RPM_BUILD_ROOT/etc/shrc.d
 
 install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d
 bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+rm -f $RPM_BUILD_ROOT%{_infodir}/dir
+rm -f $RPM_BUILD_ROOT%{_mandir}/README.which-non-english-man-pages
 
 %clean
 rm -rf $RPM_BUILD_ROOT
