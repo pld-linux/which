@@ -9,7 +9,7 @@ Summary(tr.UTF-8):	PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir a
 Summary(uk.UTF-8):	Показує, в якому з каталогів в PATH знаходиться програма
 Name:		which
 Version:	2.20
-Release:	1
+Release:	2
 License:	GPL v3+
 Group:		Applications/File
 Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
