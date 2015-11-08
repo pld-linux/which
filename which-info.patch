@@ -1,5 +1,5 @@
---- which-2.19/which.texinfo.orig	2008-01-16 18:35:39.000000000 +0100
-+++ which-2.19/which.texinfo	2008-01-22 22:11:23.347080874 +0100
+--- which-2.21/which.texi.orig	2008-01-16 18:35:39.000000000 +0100
++++ which-2.21/which.texi	2008-01-22 22:11:23.347080874 +0100
 @@ -3,9 +3,9 @@
  @setfilename which.info
  @settitle @command{which}: show full path of commands

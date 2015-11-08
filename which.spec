@@ -8,18 +8,18 @@ Summary(ru.UTF-8):	Показывает, в каком из каталогов �
 Summary(tr.UTF-8):	PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir araç
 Summary(uk.UTF-8):	Показує, в якому з каталогів в PATH знаходиться програма
 Name:		which
-Version:	2.20
-Release:	2
+Version:	2.21
+Release:	1
 License:	GPL v3+
 Group:		Applications/File
-Source0:	http://www.xs4all.nl/~carlo17/which/%{name}-%{version}.tar.gz
-# Source0-md5:	95be0501a466e515422cde4af46b2744
+Source0:	http://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
+# Source0-md5:	097ff1a324ae02e0a3b0369f07a7544a
 Source1:	%{name}.csh
 Source2:	%{name}.sh
 Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
 # Source3-md5:	8c6cfc55ca1046a2812eafd17d29561c
 Patch0:		%{name}-info.patch
-URL:		http://www.xs4all.nl/~carlo17/which/
+URL:		https://savannah.gnu.org/projects/which/
 # for (static) -liberty
 BuildRequires:	binutils-devel
 BuildRequires:	texinfo
