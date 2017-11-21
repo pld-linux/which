@@ -99,8 +99,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS EXAMPLES NEWS README*
 %attr(755,root,root) %{_bindir}/which
-/etc/shrc.d/which.csh
-/etc/shrc.d/which.sh
+%config(noreplace) %verify(not md5 mtime size) /etc/shrc.d/which.csh
+%config(noreplace) %verify(not md5 mtime size) /etc/shrc.d/which.sh
 %{_mandir}/man1/which.1*
 %lang(fi) %{_mandir}/fi/man1/which.1*
 %lang(fr) %{_mandir}/fr/man1/which.1*
