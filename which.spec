@@ -8,12 +8,12 @@ Summary(ru.UTF-8):	Показывает, в каком из каталогов �
 Summary(tr.UTF-8):	PATH'de bulunan bir dosyanın yerini bulmayı sağlayan bir araç
 Summary(uk.UTF-8):	Показує, в якому з каталогів в PATH знаходиться програма
 Name:		which
-Version:	2.21
+Version:	2.23
 Release:	1
 License:	GPL v3+
 Group:		Applications/File
-Source0:	http://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
-# Source0-md5:	097ff1a324ae02e0a3b0369f07a7544a
+Source0:	https://ftp.gnu.org/gnu/which/%{name}-%{version}.tar.gz
+# Source0-md5:	1963b85914132d78373f02a84cdb3c86
 Source1:	%{name}.csh
 Source2:	%{name}.sh
 Source3:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
@@ -68,9 +68,11 @@ belirtir.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
+# cwm4/aclocal/CW_OPG_CXXFLAGS.m4 uses `[[ .. =~ regex ]]` bashism
+bash \
 %configure
 %{__make}
 
@@ -81,10 +83,12 @@ install -d $RPM_BUILD_ROOT/etc/shrc.d
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d
+cp -p %{SOURCE1} %{SOURCE2} $RPM_BUILD_ROOT/etc/shrc.d
+
 bzip2 -dc %{SOURCE3} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
+%{__rm} $RPM_BUILD_ROOT%{_mandir}/README.which-non-english-man-pages
+
 rm -f $RPM_BUILD_ROOT%{_infodir}/dir
-rm -f $RPM_BUILD_ROOT%{_mandir}/README.which-non-english-man-pages
 
 %clean
 rm -rf $RPM_BUILD_ROOT
