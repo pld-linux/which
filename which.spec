@@ -23,6 +23,7 @@ URL:		https://savannah.gnu.org/projects/which/
 # for (static) -liberty
 BuildRequires:	binutils-devel
 BuildRequires:	texinfo
+BuildRequires:	rpmbuild(macros) >= 2.043
 Requires:	setup >= 2.4.6-2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -72,7 +73,7 @@ belirtir.
 
 %build
 # cwm4/aclocal/CW_OPG_CXXFLAGS.m4 uses `[[ .. =~ regex ]]` bashism
-bash \
+%define configureshell /bin/bash
 %configure
 %{__make}
 
